@@ -13,6 +13,6 @@ public class YeemoGameAPI extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().info("HelloWorld!");
+        getLogger().info("HelloWorld! ");
     }
 }
