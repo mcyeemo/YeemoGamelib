@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="YeemoGamelib:jar">
+    <output-path>D:/MyUHC1.8/plugins</output-path>
+    <root id="archive" name="YeemoGamelib.jar">
+      <element id="module-output" name="YeemoGamelib" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+    </root>
+  </artifact>
+</component>
