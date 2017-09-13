@@ -39,7 +39,7 @@ public class Title {
     /**
      * Title
      * <p>
-     * Use Runnable
+     *  Use Runnable
      *
      * @param plugin_ plugin instance
      * @param random enable random list display
