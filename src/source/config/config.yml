@@ -1,0 +1,41 @@
+config:
+  default_max_team: 8           # 預設最大對伍數
+  default_min_team: 4           # 預設最小對伍數 (達到後開始倒數)
+  default_team_player_amount: 1 # 預設每隊玩家人數
+  lobby_countdown: 30           # 達到最小對伍數後進入最後等待倒數 (進入遊戲場地) sec
+  ingame_countdown: 10          # 遊戲開始前 最後倒數 (在遊戲內 || 如果值為 -1 則不倒數) sec
+  rewards: null                 # 暫無
+
+###############################################################################
+sql:
+  enable: true
+  host: localhost
+  database: GAME_NAME
+  user: root
+  password: 1234
+
+###############################################################################
+state:
+  WAITING: 等待中
+  FULL: 滿人
+  IN_GAME: 進行中
+  POST_GAME: 結算
+  RESET: 重製
+  DISABLE: 關閉
+
+###############################################################################
+signs_updating_time: 20 # tick ( 20 tick = 1 sec)
+signs:
+  '0': "&r&0&l<game>"
+  '1': "<state>"
+  '2': "&r&0&n<arena>"
+  '3': "&r&7<count>/<maxcount>"
+
+###############################################################################
+mainlobby:
+  # Use BungeeCord
+  useBungeecord: false
+  bungeecord:
+    lobby: lobby
+  # not use BungeeCord
+  location: <world>;<x>;<y>;<z>;<yaw>;<pitch>
