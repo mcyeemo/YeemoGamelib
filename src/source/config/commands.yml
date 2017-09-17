@@ -1,0 +1,14 @@
+Help:
+  Description: "\u5217\u51FA\u9019\u500B\u5217\u8868"
+  Usage: ""
+  Aliases:
+  - help
+  - h
+  Permission: "YeemoGame.Command.Player.Help"
+addArena:
+  Description: "\u6DFB\u52A0\u4E00\u500B\u65B0\u7684\u904A\u6232\u5834"
+  Usage: "<\u65B0\u904A\u6232\u5834\u540D\u5B57>"
+  Aliases:
+  - addGame
+  - add
+  Permission: "YeemoGame.Command.Admin.addArena"

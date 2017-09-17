@@ -1,4 +1,7 @@
 name: YeemoGameLib
 version: 0.1
 main: tw.yeemo.YeemoGameAPI
-author: [Yeemo, Wenwen, Yoyolee, Yuanyuan]
+author: [Wenwen]
+commands:
+  yg:
+    description: YeemoGame command

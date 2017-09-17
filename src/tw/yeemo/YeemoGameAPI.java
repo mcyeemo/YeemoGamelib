@@ -12,9 +12,10 @@ public class YeemoGameAPI extends JavaPlugin {
     public void onEnable() {
         /*        Setup                 */
         YeemoGameAPI.instance = this;                                   // setup plugin
-        SettingManager setting = new SettingManager(getInstance());     // Setup Arena
+        SettingManager setting = new SettingManager(this);     // Setup Arena
         setting.setupConfig();
         setting.setupArena();
+        setting.setupCommand();
     }
 
     @Override

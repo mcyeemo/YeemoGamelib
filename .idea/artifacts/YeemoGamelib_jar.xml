@@ -8,6 +8,7 @@
       <element id="file-copy" path="$PROJECT_DIR$/src/source/config/config.yml" />
       <element id="file-copy" path="$PROJECT_DIR$/src/source/config/language.yml" />
       <element id="file-copy" path="$PROJECT_DIR$/src/source/config/stats.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/source/config/commands.yml" />
     </root>
   </artifact>
 </component>

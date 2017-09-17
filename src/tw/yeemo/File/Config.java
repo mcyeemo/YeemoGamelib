@@ -5,6 +5,7 @@ import tw.yeemo.YeemoGameAPI;
 import tw.yeemo.utils.var;
 
 import java.io.File;
+import java.util.List;
 import java.util.Set;
 
 public class Config {
@@ -13,7 +14,8 @@ public class Config {
         CONFIG("config.yml"),
         LANGUAGE("language.yml"),
         ARENA("arena.yml"),
-        STATS("stats.yml");
+        STATS("stats.yml"),
+        COMMANDS("commands.yml");
 
         private String file;
 
@@ -40,6 +42,14 @@ public class Config {
         public Set<String> getConfigurationSection(String path, Boolean key) {
             return var.yaml.get(file).getConfigurationSection(path, key);
         }
+
+        public List<String> getStringList(String path) {
+            return var.yaml.get(file).getStringList(path);
+        }
+
+        public YamlConfiguration getYamlFile() {
+            return var.yaml.get(file).getYamlFile();
+        }
     }
 
     private YeemoGameAPI instance = null;
@@ -59,10 +69,10 @@ public class Config {
 
     public void load() {
         file = new File(instance.getDataFolder(), fileName);
-        if (!file.exists()) {
+//        if (!file.exists()) {
             file.getParentFile().mkdir();
             instance.saveResource(fileName, replace);
-        }
+//        }
         yaml = new YamlConfiguration();
         try {
             yaml.load(file);
@@ -98,5 +108,13 @@ public class Config {
 
     private Set<String> getConfigurationSection(String path, Boolean key) {
         return yaml.getConfigurationSection(path).getKeys(key);
+    }
+
+    private List<String> getStringList(String path){
+        return yaml.getStringList(path);
+    }
+
+    public YamlConfiguration getYamlFile() {
+        return yaml;
     }
 }
