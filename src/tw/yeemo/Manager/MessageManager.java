@@ -3,6 +3,7 @@ package tw.yeemo.Manager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import tw.yeemo.File.Config;
 
 public enum MessageManager {
     INFO(ChatColor.YELLOW),
@@ -22,5 +23,13 @@ public enum MessageManager {
 
     public void SendMessage(CommandSender sender, String msg) {
         sender.sendMessage(color + msg);
+    }
+
+    public void SendMessageFromLanguage(Player player, String path) {
+        player.sendRawMessage(color + (String) Config.BasicFile.LANGUAGE.get(path));
+    }
+
+    public void SendLine(Player player, ChatColor color) {
+        player.sendRawMessage(color + "---------------------------------------");
     }
 }

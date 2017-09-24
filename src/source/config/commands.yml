@@ -12,3 +12,10 @@ addArena:
   - addGame
   - add
   Permission: "YeemoGame.Command.Admin.addArena"
+List:
+  Description: "\u5217\u51FA\u6240\u6709\u904A\u6232\u5834"
+  Usage: ""
+  Aliases:
+  - list
+  - l
+  Permission: "YeemoGame.Command.Admin.List"

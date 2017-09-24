@@ -1,33 +1,32 @@
 package tw.yeemo.game;
 
 import org.bukkit.ChatColor;
-import tw.yeemo.File.Config;
 
 public enum GameState {
-    WAITING(true, ChatColor.GREEN, Config.BasicFile.CONFIG.get("state.WAITING")),
-    FULL(false, ChatColor.DARK_PURPLE, Config.BasicFile.CONFIG.get("state.FULL")),
-    IN_GAME(false, ChatColor.DARK_RED, Config.BasicFile.CONFIG.get("state.IN_GAME")),
-    POST_GAME(false, ChatColor.WHITE, Config.BasicFile.CONFIG.get("state.POST_GAME")),
-    RESET(false, ChatColor.DARK_BLUE, Config.BasicFile.CONFIG.get("state.RESET")),
-    DISABLE(false, ChatColor.GRAY, Config.BasicFile.CONFIG.get("state.DISABLE"));
+    WAITING(true, ChatColor.GREEN, "state.WAITING"),
+    FULL(false, ChatColor.DARK_PURPLE, "state.FULL"),
+    IN_GAME(false, ChatColor.DARK_RED, "state.IN_GAME"),
+    POST_GAME(false, ChatColor.WHITE, "state.POST_GAME"),
+    RESET(false, ChatColor.DARK_BLUE, "state.RESET"),
+    DISABLE(false, ChatColor.GRAY, "state.DISABLE");
 
     private boolean canJoin = false;
     private ChatColor color = ChatColor.GRAY;
-    private String stateName;
+    private String statePath;
     private static GameState currentState;
 
-    GameState(boolean canJoin, ChatColor color, String stateName) {
+    GameState(boolean canJoin, ChatColor color, String statePath) {
         this.canJoin = canJoin;
         this.color = color;
-        this.stateName = stateName;
+        this.statePath = statePath;
     }
 
     public ChatColor getColor() {
         return color;
     }
 
-    public String getStateName() {
-        return stateName;
+    public String getStatePath() {
+        return statePath;
     }
 
     public boolean canJoin() {

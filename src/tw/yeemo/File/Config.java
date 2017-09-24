@@ -69,10 +69,10 @@ public class Config {
 
     public void load() {
         file = new File(instance.getDataFolder(), fileName);
-//        if (!file.exists()) {
+        if (!file.exists()) {
             file.getParentFile().mkdir();
             instance.saveResource(fileName, replace);
-//        }
+        }
         yaml = new YamlConfiguration();
         try {
             yaml.load(file);

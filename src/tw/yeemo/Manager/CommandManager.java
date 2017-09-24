@@ -57,14 +57,14 @@ public class CommandManager implements CommandExecutor {
     }
 
     public static void sendUsage(Player player) {
-        MessageManager.INFO.SendMessage(player, ChatColor.GOLD + "---------------------------------------");
+        MessageManager.INFO.SendLine(player, ChatColor.GOLD);
         MessageManager.INFO.SendMessage(player, ChatColor.GREEN + "YeemoGame Command:");
         for (YeemoCommand c : var.subCommand) {
             if (player.hasPermission(c.getPermission())) {
                 sendUsage(player, c);
             }
         }
-        MessageManager.INFO.SendMessage(player, ChatColor.GOLD + "---------------------------------------");
+        MessageManager.INFO.SendLine(player, ChatColor.GOLD);
     }
 
     private static String getAliases(List<String> aliases) {

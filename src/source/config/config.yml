@@ -16,12 +16,12 @@ sql:
 
 ###############################################################################
 state:
-  WAITING: 等待中
-  FULL: 滿人
-  IN_GAME: 進行中
-  POST_GAME: 結算
-  RESET: 重製
-  DISABLE: 關閉
+  WAITING: "\u7B49\u5F85\u4E2D"
+  FULL: "\u6EFF\u4EBA"
+  IN_GAME: "\u9032\u884C\u4E2D"
+  POST_GAME: "\0u7D50\u7B97"
+  RESET: "\u91CD\u88FD"
+  DISABLE: "\u95DC\u9589"
 
 ###############################################################################
 signs_updating_time: 20 # tick ( 20 tick = 1 sec)

@@ -6,29 +6,41 @@ import java.util.HashMap;
 
 public class ArenaManager {
 
-    public static HashMap<String, Arena> arenas = new HashMap<>();
+    private static HashMap<String, Arena> arenas = new HashMap<>();
 
-    public void loadArena(final String name) {
+    public HashMap<String, Arena> getArenas() {
+        return arenas;
+    }
+
+    void loadArena(String name) {
+        System.out.print(name);
         try {
-            Arena arena = new Arena(name);
-            arena.init();
+            new Arena(name);
             System.out.print("[ArenaManager] " + name + " has been load!");
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.print("[ArenaManager] " + name + " load fail!");
             e.printStackTrace();
         }
     }
 
-    public boolean addGame(final String name) {
-        if(!arenas.containsKey(name)){
-            Arena arena = new Arena(name);
-            arena.copyBasic();
-            return true;
+    public boolean addGame(String name) {
+        try {
+            if (!arenas.containsKey(name)) {
+                new Arena(name);
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return false;
     }
 
     public void registered(String name, Arena arena) {
         arenas.put(name, arena);
+    }
+
+    public void reset() {
+        arenas.clear();
+        arenas = new HashMap<>();
     }
 }

@@ -13,8 +13,9 @@
 #     spec:
 #       high: <world>;<x>;<y>;<z>;<yaw>;<pitch>
 #       low: <world>;<x>;<y>;<z>;<yaw>;<pitch>
-#   min_player: 4
-#   max_player: 8
+#   min_team: 4
+#   max_team: 8
+#   team_player_amount: 1
 #   displayName: <DisplayName>
 #   author: <AuthorID>
 #   description: <Description>

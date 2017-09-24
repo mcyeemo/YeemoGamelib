@@ -2,11 +2,10 @@ package tw.yeemo;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import tw.yeemo.Manager.SettingManager;
-import tw.yeemo.utils.var;
 
 public class YeemoGameAPI extends JavaPlugin {
 
-    private static YeemoGameAPI instance = null;
+    private static YeemoGameAPI instance;
 
     @Override
     public void onEnable() {
@@ -16,13 +15,6 @@ public class YeemoGameAPI extends JavaPlugin {
         setting.setupConfig();
         setting.setupArena();
         setting.setupCommand();
-    }
-
-    @Override
-    public void onDisable() {
-        /*        Disable               */
-        var.yaml.clear();
-        instance = null;
     }
 
     public static YeemoGameAPI getInstance() {

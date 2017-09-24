@@ -1,6 +1,7 @@
 package tw.yeemo.Manager;
 
 import tw.yeemo.Command.SubCommand.Help;
+import tw.yeemo.Command.SubCommand.List;
 import tw.yeemo.Command.SubCommand.addGame;
 import tw.yeemo.File.Config;
 import tw.yeemo.YeemoGameAPI;
@@ -10,7 +11,7 @@ import java.util.Set;
 
 public class SettingManager {
 
-    private YeemoGameAPI main = null;
+    private YeemoGameAPI main;
 
     public SettingManager(YeemoGameAPI instance) {
         main = instance;
@@ -36,5 +37,6 @@ public class SettingManager {
         main.getCommand("yg").setExecutor(new CommandManager(main));
         cm.addSubCommand(new Help());
         cm.addSubCommand(new addGame());
+        cm.addSubCommand(new List());
     }
 }
